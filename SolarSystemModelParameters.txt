@@ -1,0 +1,55 @@
+Using the following initial conditions for the orbital mechanics of the solar system, please create a python model to simulate the solar system with realistic gravitational interactions between the Sun and the planets, including planet to planet gravitational interactions, for each timestep of 1 day in the model. This should update the forces, velocities, accelerations, and positions for each planet relative to each other and the Sun at the center. Update these parameters every day, but for the purposes of the plots, keep track of the positions every 100 days. Run the simulation for 200000 days. Show the results in a 2D plot. The plot should use different colored dots for each object, showing the positions every 100 days with that same colored dot, and should also show the paths that each planet takes around the Sun with a line of the same color.
+
+# Define gravitational constant (m^3 kg^-1 s^-2)
+G = 6.67430e-11
+
+# Define the mass of the Sun in kg
+massofSun = 1.989e30
+
+# Mass (kg) - This is the mass of the planet in kilograms.
+masses = {
+    "Mercury": 3.285e23,
+    "Venus": 4.867e24,
+    "Earth": 5.972e24,
+    "Mars": 6.39e23,
+    "Jupiter": 1.898e27,
+    "Saturn": 5.683e26,
+    "Uranus": 8.681e25,
+    "Neptune": 1.024e26
+}
+
+# Distance from Sun (km) - This is the average distance from the planet to the Sun in kilometers, also known as the semi-major axis. All planets have orbits which are elliptical, not perfectly circular, so there is a point in the orbit at which the planet is closest to the Sun, the perihelion, and a point furthest from the Sun, the aphelion. The average distance from the Sun is midway between these two values. The average distance from the Earth to the Sun is defined as 1 Astronomical Unit (AU).
+orbital_radii = {
+    "Mercury": 57.9e6,
+    "Venus": 108.2e6,
+    "Earth": 149.6e6,
+    "Mars": 228e6,
+    "Jupiter": 778e6,
+    "Saturn": 1432e6,
+    "Uranus": 2867e6,
+    "Neptune": 4515e6
+}
+
+# Orbital Period (days) - This is the time in Earth days for a planet to orbit the Sun from one vernal equinox to the next. Also known as the tropical orbit period, this is equal to a year on Earth.
+ = {
+    "Mercury": 88.0,
+    "Venus": 224.7,
+    "Earth": 365.2,
+    "Mars": 687.0,
+    "Jupiter": 4331.0,
+    "Saturn": 10747.0,
+    "Uranus": 30589.0,
+    "Neptune": 59800.0
+}
+
+# Orbital Velocity (km/s) - The average velocity or speed of the planet as it orbits the Sun, in kilometers per second.
+ = {
+    "Mercury": 47.4,
+    "Venus": 35.0,
+    "Earth": 29.8,
+    "Mars": 24.1,
+    "Jupiter": 13.1,
+    "Saturn": 9.7,
+    "Uranus": 6.8,
+    "Neptune": 5.4
+}
