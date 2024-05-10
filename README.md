@@ -6,6 +6,8 @@ Final Project Proposal by Darryl J. Schnellenberger
 
 The basis of the project is to create a 2D model and eventually a 3D model. This all depends on if I am able to stabilize the 2D model and get at least one 3D animation tool to work on my laptop.
 
+While there are some minimalist programs that do work in this repository that were primarily developed form other sources, the most recent primary file has been turtle2Dplanetsimulator.py,  where a lot of effort has gone into getting this Turtle simulator running once Turtle objects finally displayed on my computer. I seem to be having issues with scaling though (orbital and planetary sizes), and have yet to get that worked out to at least get the initial objects to display.
+
 The solar system model is being developed with real gravitational physics in the model. Various functions are being added to the finalprojectfunctions.py file, which includes integrators (Runge-Kutta 2 and Leap Frog), N-Body models, various gravitational mechanics models (accelerations, forces, vectors, etc.), positional updates, randomization function (to randomize the starting positions), and various animation and movement functions.
 
 Once all of this is working, the idea is to be able to modify the solar objects' configurations, in particular to play around with the mass of Jupiter and watch what happens to the orbits of the other planets and the Sun (requiring the Sun's position to be modifiable). While the model is still not stable and producing even a 2D model, primarily due to issues with animation attempts, including matplotlib, Turtle, and PyGames.
